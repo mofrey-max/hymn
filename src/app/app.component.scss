@@ -11,7 +11,7 @@
     }
 } */
 ion-content{
-    --ion-background-color:Violet;
+    --ion-background-color:purple;
     ion-item{
         color: var(--ion-color-light-tint)
   
@@ -31,7 +31,8 @@ ion-content{
     margin-top: 15%;
 }
 .space{
-    margin-top: 10%;
+    --padding:10%;
+    --margin-top: 10%;
     opacity:10%;
 }
 h6{
@@ -41,7 +42,7 @@ h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: Violet;
+    background: purple;
     min-height: 190px;
     .logo-section__wrapper{
         align-items: center;

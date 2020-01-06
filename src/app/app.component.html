@@ -2,37 +2,38 @@
 <ion-app>
     <ion-menu contentId="content1" side="start">
         <div class="ion-text-center">
-            <img src="./../../../assets/icon/new.png" width="100px" height="100px"/>
-            <h6>Miya Fal Hyel</h6>
+            <img src="./../../../assets/icon/Heba.png" width="100px" height="100px"/>
         </div>
       
       <ion-content>
 
        <ion-menu-toggle>
-          <ion-item lines="none" routerLink="#" routerDirection="forward">
+          <ion-item lines="none" routerLink="/setting" routerDirection="forward">
           <ion-icon  name="cog" slot="start"></ion-icon>
             Settings
           </ion-item>
        </ion-menu-toggle>
          
       <ion-menu-toggle>
-          <ion-item lines="none" routerLink="#" routerDirection="forward">
+          <ion-item lines="none" routerLink="/help" routerDirection="forward">
           <ion-icon name="help" slot="start"></ion-icon>
             Help
           </ion-item>
       </ion-menu-toggle>
 
       <ion-menu-toggle>
-        <ion-item lines="none" routerLink="#" routerDirection="forward">
+        <ion-item lines="none" routerLink="about" routerDirection="forward">
         <ion-icon name="information-circle" slot="start"></ion-icon>
           About
         </ion-item>
     </ion-menu-toggle>
 
        <ion-item-divider class="divi"></ion-item-divider>
-       <ion-label class="space" padding>communicate</ion-label>
+       <ion-item lines="none">
+        Communicate
+       </ion-item>
        <ion-menu-toggle>
-        <ion-item lines="none" >
+        <ion-item lines="none" href="mailto:manugodfrey8@gmail.com">
            <ion-icon  name="mail" slot="start"></ion-icon>
            manugodfrey@gmail.com
           </ion-item>

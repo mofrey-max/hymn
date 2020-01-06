@@ -7,7 +7,7 @@
     <ion-buttons slot="start" *ngIf="!isSearchbarOpened">
       <ion-menu-button autoHide="false"></ion-menu-button>
   </ion-buttons>
-    <ion-searchbar placeholder="Search no. or title" color="dark" *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true" (ionCancel) = "isSearchbarOpened=false">
+    <ion-searchbar placeholder="Search no." color="dark" *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true" (ionCancel) = "isSearchbarOpened=false">
     
     </ion-searchbar>
     <ion-buttons slot ="end" ion-button icon-only *ngIf="!isSearchbarOpened" (click) ="isSearchbarOpened=true">
@@ -30,7 +30,7 @@
       </ion-tab-button>
 
       <ion-tab-button tab="tab3" class="tbs">
-        <ion-label>Favorite</ion-label>
+        <ion-label>Favourite</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   
