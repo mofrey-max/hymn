@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hymn0001.page.scss'],
 })
 export class Hymn0001Page implements OnInit {
-
+  fontSize: number;
   constructor() { }
 
   ngOnInit() {
   }
-
+onChange() {
+  console.log(this.fontSize);
+}
 }

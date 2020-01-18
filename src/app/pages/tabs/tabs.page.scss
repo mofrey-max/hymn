@@ -1,15 +1,19 @@
 .tbs{
     font-size: 14px;
     background:purple;
-  
 }
 
-ion-tab-button:hover{
-   background-origin: padding-box;
-   box-sizing: border-box;
-   box-shadow: lightgray;
-}
+ion-tab-button.tab-selected {
+  ion-icon, ion-label {
+    color: #f3e5ab !important;
+    --ion-color-base: var(--ion-color-gold-tint) !important;
+
+  }
+} 
+
+
 .search{
 margin-right: 1rem;
 font-size: 20px;
 }
+

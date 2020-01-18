@@ -10,18 +10,12 @@
 
 
 <ion-content padding class="settingsPage">
-  <ion-list>
-    <ion-item>
-      <ion-label>Make me discoverable by others</ion-label>
-     
-    </ion-item>
-    <ion-item>
-      <ion-label>Notifications for Messages</ion-label>
-      
-    </ion-item>
-    <ion-item>
-      <ion-label>Notifications for Invites</ion-label>
-    
-    </ion-item>
-  </ion-list>
+
+ <label for="volume">FontSize</label> 
+ <br>
+ <br>
+    <input type="range"  name="volume"
+           min="1" max="4" [ngModel]="fontSize" (input)="onChange($event.target.value)" step="0.1"/>
+  
+  <p>Test</p>
 </ion-content>

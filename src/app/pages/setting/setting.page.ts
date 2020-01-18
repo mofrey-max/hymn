@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-setting',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setting.page.scss'],
 })
 export class SettingPage implements OnInit {
-
-  constructor() { }
+  fontSize;
 
   ngOnInit() {
+  }
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  onChange(fontsize) {
+    const body = document.getElementsByTagName('body')[0];
+    body.setAttribute('style', `font-size: ${fontsize}rem`);
+    this.cdr.detectChanges();
+    console.log(body);
+    // fontsize
   }
 
 }
