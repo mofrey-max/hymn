@@ -9,13 +9,26 @@
 </ion-header>
 
 
-<ion-content padding class="settingsPage">
+<ion-content padding>
+ 
+  <ion-item-divider>
+    <ion-label>
+      Dark theme
+    </ion-label>
+  </ion-item-divider>
 
- <label for="volume">FontSize</label> 
- <br>
- <br>
+  <ion-item-divider>
+    <ion-label>
+      light theme
+    </ion-label>
+  </ion-item-divider>
+<ion-item-divider>
+  <ion-label>Font Size</ion-label>
+</ion-item-divider>
+  <div class="sliderContainer">
     <input type="range"  name="volume"
-           min="1" max="4" [ngModel]="fontSize" (input)="onChange($event.target.value)" step="0.1"/>
-  
-  <p>Test</p>
+    min="0.8" max="3" class="slider" [ngModel]="fontSize" (input)="onChange($event.target.value)" value = "7" step="0.1"/>
+      
+  </div>
+
 </ion-content>
