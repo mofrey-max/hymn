@@ -10,15 +10,6 @@ export class ThemeService {
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
-  setPrimaryColor(color: string) {
-    this.setVariable('--ion-color-primary', color)
-  }
-
-  setVariable(name: string, value: string) {
-    this.currentTheme = `${name}: ${value};`
-    this.document.documentElement.style.setProperty(name, value)
-  }
-
   enableDarkMode(enableDarkMode: boolean) {
     let theme = this.getLightTheme()
   if (enableDarkMode) theme = this.getDarkTheme()
