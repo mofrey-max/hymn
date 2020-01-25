@@ -15,7 +15,7 @@ export class ThemeService {
   if (enableDarkMode) theme = this.getDarkTheme()
     this.document.documentElement.style.cssText = theme
   }
-
+  
   getDarkTheme() {
     return `
       ${this.currentTheme}
