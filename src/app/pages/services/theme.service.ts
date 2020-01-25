@@ -1,22 +1,14 @@
 import { Injectable, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import {ThemeService } from './../services/theme.service';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
-@Component({
-  selector: 'app-setting',
-  templateUrl: './setting.page.html',
-  styleUrls: ['./setting.page.scss'],
+@Injectable({
+  providedIn: 'root'
 })
-export class SettingPage implements OnInit {
-  fontSize;
-
-  ngOnInit() {
-  }
+export class ThemeService {
 
   private currentTheme = '';
 
-  constructor(@Inject(DOCUMENT) private document: Document, private cdr: ChangeDetectorRef, private themeService: ThemeService) {}
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   setPrimaryColor(color: string) {
     this.setVariable('--ion-color-primary', color)
@@ -31,10 +23,6 @@ export class SettingPage implements OnInit {
     let theme = this.getLightTheme()
   if (enableDarkMode) theme = this.getDarkTheme()
     this.document.documentElement.style.cssText = theme
-  }
-
-  onChangeToggle(ev: CustomEvent) {
-    this.themeService.enableDarkMode(ev.detail.checked)
   }
 
   getDarkTheme() {
@@ -60,13 +48,4 @@ export class SettingPage implements OnInit {
       --ion-text-color-step-600: #222;
     `;
   }
-
-  onChange(fontsize) {
-    const body = document.getElementsByTagName('body')[0];
-    body.setAttribute('style', `font-size: ${fontsize}rem`);
-    this.cdr.detectChanges();
-    console.log(body);
-    // fontsize
-  }
-
 }

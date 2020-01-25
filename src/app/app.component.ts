@@ -1,4 +1,3 @@
-import { AuthenticationService } from './services/authentication.service';
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';

@@ -11,17 +11,13 @@
 
 <ion-content padding>
  
-  <ion-item-divider>
-    <ion-label>
-      Dark theme
-    </ion-label>
-  </ion-item-divider>
+<ion-item-divider>
+    <ion-buttons slot="start">
+      <p class="bold text-small">Dark Mode</p>
+      <ion-toggle mode="md" color="dark" (ionChange)="onChangeToggle($event)"></ion-toggle>
+    </ion-buttons>
+</ion-item-divider>
 
-  <ion-item-divider>
-    <ion-label>
-      light theme
-    </ion-label>
-  </ion-item-divider>
 <ion-item-divider>
   <ion-label>Font Size</ion-label>
 </ion-item-divider>
