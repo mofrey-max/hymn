@@ -2,12 +2,16 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title *ngIf="!isSearchbarOpened">
-      Miya Fal Hyel
+      LIKATKATe MIYA FAL HYEL
     </ion-title>
     <ion-buttons slot="start" *ngIf="!isSearchbarOpened">
       <ion-menu-button autoHide="false"></ion-menu-button>
   </ion-buttons>
-    <ion-searchbar placeholder="Search no." color="dark" *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true" (ionCancel) = "isSearchbarOpened=false">
+    <ion-searchbar [(ngModel)]="searchTerm"
+                  (ionChange)="setFilteredItems()" 
+                  placeholder="Search no." color="dark" 
+                  *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true" 
+                  (ionCancel) = "isSearchbarOpened=false">
     
     </ion-searchbar>
     <ion-buttons slot ="end" ion-button icon-only *ngIf="!isSearchbarOpened" (click) ="isSearchbarOpened=true">

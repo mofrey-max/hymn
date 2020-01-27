@@ -1,3 +1,4 @@
+import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab2Page implements OnInit {
 
-  constructor() { }
+  public searchTerm: string = "";
+  public items: any;
+  
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.setFilteredItems();
+  }
+
+  setFilteredItems() {
+    this.items = this.dataService.filterItems(this.searchTerm);
   }
 
 }

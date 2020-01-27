@@ -1,29 +1,10 @@
 <!DOCTYPE html>
-<ion-content class="main-content" padding>
-  <ion-item>
-    <ion-text color="violet">0001</ion-text>
-    <ion-icon name="cog"></ion-icon>
-   <h5 class="title">The God of Abraham praise!</h5>
-  </ion-item>
-  <ion-item>
-   <ion-text color="violet">0003</ion-text>
-   <ion-icon name="cog"></ion-icon>
-  <h5 class="title">Thou whose almihty word</h5>
- </ion-item>
- <ion-item>
-   <ion-text color="violet">0003</ion-text>
-   <ion-icon name="cog"></ion-icon>
-  <h5 class="title">Come, Thou Almighty King</h5>
- </ion-item>
- <ion-item>
-   <ion-text color="violet">0004</ion-text>
-   <ion-icon name="cog"></ion-icon>
-  <h5 class="title">Glory to God on high</h5>
- </ion-item>
- <ion-item>
-   <ion-text color="violet">0005</ion-text>
-   <ion-icon name="cog"></ion-icon>
-  <h5 class="title">Grace tis a charming sound</h5>
- </ion-item>
-  
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-text color="violet">{{item.index}}</ion-text>
+      <ion-icon name="musical-notes"></ion-icon>
+     <h5 class="title">{{item.name}}</h5>
+    </ion-item>
+  </ion-list>
 </ion-content>
