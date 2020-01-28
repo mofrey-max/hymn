@@ -2,12 +2,12 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title *ngIf="!isSearchbarOpened">
-      <h6>LIKATKATe MIYA FAL HYEL</h6>
+      <h6>LIKATKAT&#477; MIYA FAL HYEL</h6>
     </ion-title>
     <ion-buttons slot="start" *ngIf="!isSearchbarOpened">
       <ion-menu-button autoHide="false"></ion-menu-button>
   </ion-buttons>
-    <ion-searchbar [(ngModel)]="searchTerm"
+    <ion-searchbar [(ngModel)]="searchTerm"              
                   (ionChange)="setFilteredItems()" 
                   placeholder="Search no." color="dark" 
                   *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true" 
@@ -39,4 +39,7 @@
     </ion-tab-bar>
   
   </ion-tabs>
+
+  
+  
 </ion-content>

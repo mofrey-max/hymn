@@ -9,32 +9,35 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./setting.page.scss'],
 })
 export class SettingPage implements OnInit {
+  private currentTheme = '';
   fontSize;
 
   ngOnInit() {
   }
 
-  private currentTheme = '';
+
 
   constructor(@Inject(DOCUMENT) private document: Document, private cdr: ChangeDetectorRef, private themeService: ThemeService) {}
 
   setPrimaryColor(color: string) {
-    this.setVariable('--ion-color-primary', color)
+    this.setVariable('--ion-color-primary', color);
   }
 
   setVariable(name: string, value: string) {
-    this.currentTheme = `${name}: ${value};`
-    this.document.documentElement.style.setProperty(name, value)
+    this.currentTheme = `${name}: ${value};`;
+    this.document.documentElement.style.setProperty(name, value);
   }
 
   enableDarkMode(enableDarkMode: boolean) {
-    let theme = this.getLightTheme()
-  if (enableDarkMode) theme = this.getDarkTheme()
-    this.document.documentElement.style.cssText = theme
+    let theme = this.getLightTheme();
+    if (enableDarkMode) {
+    theme = this.getDarkTheme();
+    this.document.documentElement.style.cssText = theme;
+  }
   }
 
   onChangeToggle(ev: CustomEvent) {
-    this.themeService.enableDarkMode(ev.detail.checked)
+    this.themeService.enableDarkMode(ev.detail.checked);
   }
 
   getDarkTheme() {
