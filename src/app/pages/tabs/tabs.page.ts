@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './../../services/data.service';
+
 
 @Component({
   selector: 'app-tabs',
@@ -12,14 +12,15 @@ export class TabsPage implements OnInit {
   public items: any;
 
   public isSearchbarOpened = false;
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
   ngOnInit() {
     this.setFilteredItems();
+  
   }
 
   setFilteredItems() {
-    this.items = this.dataService.filterItems(this.searchTerm);
+    //this.items = this.dataService.filterItems(this.searchTerm);
   }
   tab2selected() {
     console.log('I am Selected');
