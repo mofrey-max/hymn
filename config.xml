@@ -2,7 +2,7 @@
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name />
     <description>An awesome app.</description>
-    <author email="hi@ionicframework.com" href="#">Mr. Manunyi Godfrey</author>
+    <author email="manugodfrey8@gmail.com" href="#">Mr. Manunyi Godfrey</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

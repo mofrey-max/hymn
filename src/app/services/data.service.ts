@@ -1,42 +1,55 @@
-import { Injectable } from "@angular/core";
-import { RouterLink } from '@angular/router';
+
+import { Injectable } from '@angular/core';
+import { Router, RouterEvent } from '@angular/router';
+
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class DataService {
   public items: any = [];
+  selectedPath = '';
 
-  constructor() {
+  constructor( private router: Router) {
+    this.router.events.subscribe((event: RouterEvent) => {
+      if (event && event.url) {
+        this.selectedPath = event.url;
+      }
+    });
     this.items = [
-      { 
-        title: '1',
+      {
+        id: '1',
         index: '0001',
-        name:  'The God of Abraham praise!',
-        url:    ''
+        title:  'The God of Abraham praise!',
+        url:  '/hymn0001'
+
       },
-      { 
-        title: '2',
+      {
+        id: '2',
         index: '0002',
-        name:  'Thou whose almihty word',
-        
+        title:  'The God of Abraham praise!',
+        url:  '/hymn0001'
       },
-      { 
-        title: '3',
+      {
+        id: '3',
+        index: '0003',
+        title:  'The God of Abraham praise!',
+        url:  '/hymn0001'
+      },
+      {
+        id: '4',
         index: '0004',
-        name:  'The God of Abraham praise!'
+        title:  'The God of Abraham praise!',
+        url:  '/hymn0001'
       },
-      { 
-        title: '4',
-        index: '0004',
-        name:  'Glory to God on high'
-      },
-      { 
-        title: '5',
+      {
+        id: '5',
         index: '0005',
-        name:  'Grace tis a charming sound'
+        title:  'The God of Abraham praise!',
+        url:  '/hymn0001'
       },
-      
+
+
     ];
   }
 

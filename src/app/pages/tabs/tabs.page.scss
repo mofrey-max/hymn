@@ -1,12 +1,13 @@
-.tbs{
+
+ .tbs{
     font-size: 14px;
     background:purple;
-}
+} 
 
-ion-tab-button.tab-selected {
+ ion-tab-button.tab-selected {
   ion-icon, ion-label {
     color: #f3e5ab !important;
-    --ion-color-base: var(--ion-color-gold-tint) !important;
+    --ion-color-base: purple !important;
 
   }
 } 
@@ -16,4 +17,5 @@ ion-tab-button.tab-selected {
 margin-right: 1rem;
 font-size: 20px;
 }
+
 

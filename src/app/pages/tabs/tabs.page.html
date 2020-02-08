@@ -7,10 +7,10 @@
     <ion-buttons slot="start" *ngIf="!isSearchbarOpened">
       <ion-menu-button autoHide="false"></ion-menu-button>
   </ion-buttons>
-    <ion-searchbar [(ngModel)]="searchTerm"              
+    <ion-searchbar [(ngModel)]="searchTerm"            
                   (ionChange)="setFilteredItems()" 
-                  placeholder="Search no." color="dark" 
-                  *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true" 
+                  placeholder="Search no."
+                  *ngIf="isSearchbarOpened" showCancelButton= "isSearchbarOpened=true"
                   (ionCancel) = "isSearchbarOpened=false">
     
     </ion-searchbar>
@@ -21,7 +21,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding >
+<ion-content>
   <ion-tabs>
 
     <ion-tab-bar slot="top" color="primary">
@@ -39,7 +39,4 @@
     </ion-tab-bar>
   
   </ion-tabs>
-
-  
-  
 </ion-content>

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,6 +11,7 @@ export class Tab1Page implements OnInit {
 
   public searchTerm: string = "";
   public items: any;
+  public isSearchbarOpened = false;
   
   constructor(private dataService: DataService) { }
 
